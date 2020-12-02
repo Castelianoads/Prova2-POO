@@ -5,36 +5,39 @@ public class Inimigo {
     private String nome;
     private int vida;
     private int dano; 
-    private Jogador jogador; 
-        
+
     // Construtor
     public Inimigo (String nome, int vida, int dano) {
         this.nome = nome;
-        this.vida = vida;
+        this.vida = 100;
         this.dano = dano;
     }
 
     // Metodos da classe    
     public void atacar (Jogador jogador) { // Inimigo ataca
-        System.out.println("Atacou");
-        jogador.setVida(jogador.getVida() - this.dano);
+        System.out.println(nome+ " com " +dano+ " de dano atacou " +jogador.getNome());
+        //System.out.println();
+        jogador.pederVida(dano);
+      
     }
-   
-    public void pederVida (int pontos) { 
+    
+    public void pederVida (int danoJogador) { 
+        vida = vida - danoJogador;
         if (vida <= 0) {
-            System.out.println("Jogador morreu.");
+            vida = 0;
+            System.out.println(nome+ " morreu.\n");
         } else if (vida >= 1) {
-            pontos = jogador.getDano();
-            vida = vida - pontos;
-            System.out.println("Perdeu " +pontos+ " pontos de vida");
-        }
-        
+            
+            System.out.println("perdeu " +danoJogador+ " de vida, vida atual: " +vida); // Nao consegui colocar o nome do jogador perdeu .....
+            System.out.println();
+        }        
     }
 
     public void status() {
         System.out.println("Inimigo: " +nome);
         System.out.println("Vida: " +vida);
         System.out.println("Dano: " +dano);
+        System.out.println();
     }
    
     public int getVida() {
@@ -50,6 +53,9 @@ public class Inimigo {
     public void setDano(int dano) {
     	this.dano = dano;
     }
-   
+
+    public String getNome() {
+        return this.nome;
+    }   
 }    
     
