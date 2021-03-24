@@ -7,12 +7,19 @@ Os tipos são byte, short, int, long, float, double, boolean e char.
 
 Seus tamanhos são:
 boolena ocupa 1 bit, true ou false
+
 char ocupa 1 byte, 'A'.
+
 byte ocupa 1 byte, valores entre -128 a 127.
+
 short ocupa 2 bytes, valores entre -32.768 a 32.767.
+
 int ocupa 4 bytes, valores entre -2.147.483.648 a 2.147.483.647.
+
 long ocupa 8 bytes, -9.223.372.036.854.775.808 to 9.223.372.036.854.775.807.
+
 float ocupa 4 bytes, decimal de 6 a 7 digitos.
+
 double ocupa 8 bytes, decimal com 15 digitos.
 
 ### foram utilizados as seguintes variaveis do tipo primitivo e seus tamanhos.
